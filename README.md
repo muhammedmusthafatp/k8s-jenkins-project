@@ -142,36 +142,6 @@ k8s-jenkins-project
 
 ---
 
-## 🔄 CI/CD Workflow
-
-```
-Developer
-    │  git push
-    ▼
-GitHub Repository
-    │
-    ▼
-Jenkins Pipeline
-    │
-    ├── Checkout Source Code
-    ├── Build Docker Image
-    ├── Authenticate to Amazon ECR
-    ├── Push Docker Image
-    ├── Deploy to Kubernetes
-    └── Verify Rolling Update
-    │
-    ▼
-Amazon ECR
-    │
-    ▼
-Kubernetes Cluster
-    │
-    ▼
-NodePort Service
-    │
-    ▼
-Browser
-```
 
 ### Jenkins Pipeline Stages
 
@@ -234,21 +204,21 @@ This ensures **zero downtime** during every deployment — a new pod is fully re
 ## 📊 Deployment Validation
 
 ### ✅ 1. Checkout Source Code
-<p align="center"><img src="screenshots/checkout.png" width="900"></p>
+<p align="center"><img src="screenshots/checkout.png" width="800"></p>
 
 ### ✅ 2. Build Docker Image
-<p align="center"><img src="screenshots/build1.png" width="900"></p>
-<p align="center"><img src="screenshots/build2.png" width="900"></p>
+<p align="center"><img src="screenshots/build1.png" width="800"></p>
+<p align="center"><img src="screenshots/build2.png" width="800"></p>
 
 ### ✅ 3. Authenticate to Amazon ECR
 <p align="center"><img src="screenshots/loginecr.png" width="900"></p>
 
 ### ✅ 4. Push Docker Image to ECR
-<p align="center"><img src="screenshots/pushimage.png" width="900"></p>
+<p align="center"><img src="screenshots/pushimage.png" width="800"></p>
 <p align="center"><img src="screenshots/imagepushedtoecr.png" width="900"></p>
 
 ### ✅ 5. Jenkins Pipeline — Full Stage View
-<p align="center"><img src="screenshots/stageview.png" width="900"></p>
+<p align="center"><img src="screenshots/stageview.png" width="800"></p>
 
 ### ✅ 6. Kubernetes Nodes
 ```bash
@@ -257,8 +227,8 @@ kubectl get nodes
 <p align="center"><img src="screenshots/nodes.png" width="900"></p>
 
 ### ✅ 7. Deploy to Kubernetes
-<p align="center"><img src="screenshots/deploy1.png" width="900"></p>
-<p align="center"><img src="screenshots/deploy2.png" width="900"></p>
+<p align="center"><img src="screenshots/deploy1.png" width="800"></p>
+<p align="center"><img src="screenshots/deploy2.png" width="800"></p>
 
 ### ✅ 8. Kubernetes Deployments
 ```bash
@@ -285,7 +255,7 @@ kubectl rollout status deployment/node-app -n jenkins-demo
 <p align="center"><img src="screenshots/rolloutsuccessfull.png" width="900"></p>
 
 ### ✅ 12. Application Running Successfully
-<p align="center"><img src="screenshots/applicationrunning.png" width="900"></p>
+<p align="center"><img src="screenshots/applicationrunning.png" width="800"></p>
 
 ---
 ## 🚧 Challenges Encountered
