@@ -53,7 +53,7 @@ GitHub Repository
     │
     ▼
 ┌───────────────────────────────┐
-│        Jenkins Pipeline        │
+│        Jenkins Pipeline       │
 │  ┌──────────────────────────┐ │
 │  │ 1. Checkout Source Code  │ │
 │  │ 2. Build Docker Image    │ │
@@ -62,7 +62,7 @@ GitHub Repository
 │  │ 5. Deploy to Kubernetes  │ │
 │  │ 6. Verify Rolling Update │ │
 │  └──────────────────────────┘ │
-└───────────────┬─────────────────┘
+└───────────────┬───────────────┘
                 │
                 ▼
           Amazon ECR
