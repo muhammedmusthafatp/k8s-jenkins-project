@@ -16,23 +16,12 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-
-            steps {
-
-                git branch: 'main',
-                url: 'https://github.com/muhammedmusthafatp/k8s-jenkins-project.git'
-
-            }
-
-        }
-
         stage('Build Image') {
 
             steps {
 
                 sh '''
-                docker build -t $IMAGE_NAME ./app
+                docker build -t $IMAGE_NAME .
                 '''
 
             }
@@ -76,7 +65,11 @@ pipeline {
 
                 sh '''
 
-                kubectl apply -f k8s/
+                kubectl apply -f k8s/namespace.yml
+		
+		kubectl apply -f k8s/deployment.yml
+
+		kubectl apply -f k8s/service.yml
 
                 kubectl rollout restart deployment/node-app -n jenkins-demo
 
