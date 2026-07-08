@@ -306,6 +306,4 @@ Cloud • DevOps • Kubernetes • AWS
 
 <div align="center">
 
-⭐ **If this project helped you understand production CI/CD workflows, consider giving it a star!**
-
 </div>
